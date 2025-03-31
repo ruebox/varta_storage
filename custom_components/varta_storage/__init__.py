@@ -61,7 +61,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
                     else:
                         r = v.get_all_data_modbus()
                 except Exception as e:
-                    LOGGER.Info("Can not retrieve Data from the VARTA Device. %s", e)
+                    LOGGER.info("Can not retrieve Data from the VARTA Device. %s", e)
                     raise UpdateFailed(
                         "Can not retrieve Data from the VARTA Device."
                     ) from Exception
